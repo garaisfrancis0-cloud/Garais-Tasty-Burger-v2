@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Black', 'Arial', sans-serif;
+}
+
+.burger-page-container {
+  background-color: #00a2ff;
+  min-height: 100vh;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.crab-logo-badge {
+  background-color: #ff3333;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crab-icon {
+  font-size: 1.2rem;
+}
+
+.brand-name {
+  color: #ff3333;
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-shadow: 1px 1px 0px #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.nav-links a.active {
+  color: #ff3333;
+}
+
+.cart-item-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  font-size: 1.2rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  background-color: #ff0000;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+  gap: 15px;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 250px;
+  text-align: right;
+}
+
+.hero-title {
+  color: #ff4800;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.hero-description {
+  color: #ff2a2a;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.hero-center {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.featured-image {
+  width: 280px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.price-tag {
+  position: absolute;
+  right: -20px;
+  bottom: 10px;
+  color: #ff0000;
+  font-size: 1.1rem;
+  font-weight: 900;
+  transform: rotate(-8deg);
+  text-shadow: 2px 2px 0px #ffffff, -2px -2px 0px #ffffff;
+}
+
+.hero-right {
+  flex: 1;
+  max-width: 250px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.order-now-btn {
+  background-color: #ffb700;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.order-now-btn:hover {
+  background-color: #ffa500;
+}
+
+/* Bottom Grid Cards (Compact para hindi maputol) */
+.burgers-grid-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  padding-bottom: 5px;
+}
+
+.burgers-grid {
+  display: flex;
+  gap: 15px;
+}
+
+.burger-card {
+  width: 190px;
+  background-color: #6ed3ff;
+  border: 3px solid #b2ebff;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.burger-card.active-card {
+  border-color: #ffffff;
+  transform: scale(1.02);
+}
+
+.card-img-box {
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.card-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-title {
+  color: #ff3333;
+  font-size: 0.85rem;
+  font-weight: 900;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.card-desc {
+  color: #ffffff;
+  font-size: 0.6rem;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 4px;
+  height: 26px;
+  overflow: hidden;
+}
+
+.card-price {
+  color: #ff3333;
+  font-size: 0.8rem;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.qty-btn {
+  background-color: #ffa500;
+  color: #ffffff;
+  border: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-value {
+  color: #ff3333;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.calculated-total-display {
+  font-size: 0.68rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.calculated-total-display span {
+  color: #ff0000;
+  font-size: 0.78rem;
+}
+
+.add-cart-btn {
+  background-color: #ffb700;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 5px 0;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-cart-btn:hover {
+  background-color: #e6a800;
+}
+
+/* Modal Popup Cart */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 330px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-bottom: 12px;
+  color: #ff3333;
+  font-size: 1.2rem;
+}
+
+.empty-cart {
+  color: #666;
+  margin: 15px 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.85rem;
+}
+
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+  text-align: left;
+  font-family: 'Arial', sans-serif;
+}
+
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1rem;
+  margin-top: 8px;
+  color: #ff3333;
+}
+
+.checkout-btn {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 9px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.close-modal-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 7px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
